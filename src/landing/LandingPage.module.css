@@ -1,0 +1,240 @@
+.landingContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('../assets/images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+.landingHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navigationMenu ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navigationMenu li {
+  cursor: pointer;
+  color: white;
+}
+
+.navigationMenu a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navigationMenu a:hover {
+  color: #ff4081; /* Pink */
+}
+
+.mainContent {
+  margin-top: 10rem; /* Adjust based on header height */
+  background: rgba(255, 255, 255, 0.85); /* Light background with transparency */
+  padding: 2rem; /* Add padding for better spacing */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for depth */
+  max-width: 800px; /* Set a max width for the content */
+  width: 90%; /* Responsive width */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+  text-align: center; /* Center text */
+  animation: fadeIn 1s ease-in-out; /* Smooth fade-in animation */
+}
+
+.mainContent h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem; /* Reduced margin for better spacing */
+  color: #2c3e50; /* Dark color for visibility */
+  font-weight: bold; /* Make the headline bold */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for better readability */
+}
+
+.mainContent p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #34495e; /* Darker color for better contrast */
+  line-height: 1.5; /* Improved line height for readability */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for better readability */
+}
+
+.ctaButton {
+  padding: 1rem 2rem;
+  background: #ff4081; /* Pink */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+
+.ctaButton:hover {
+  background: #e91e63; /* Darker pink */
+}
+
+.ctaButton:focus {
+  outline: 2px solid #ff4081; /* Pink */
+  outline-offset: 2px;
+}
+
+/* Role Selection */
+.roleSelection {
+  margin-top: 2rem;
+}
+
+.roleSelection h2 {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.roleButton {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  background: #ffffff; /* White */
+  color: #ff4081; /* Pink */
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.roleButton:hover {
+  background: #ff4081; /* Pink */
+  color: white;
+}
+
+.roleButton:focus {
+  outline: 2px solid #ff4081; /* Pink */
+  outline-offset: 2px;
+}
+
+/* Features Section */
+.features {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+}
+
+.features h2 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.featureList {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.featureItem {
+  flex: 1;
+  margin: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.featureItem:hover {
+  transform: translateY(-5px);
+}
+
+.featureItem i {
+  font-size: 2rem;
+  color: #ff4081; /* Pink */
+}
+
+.featureItem h3 {
+  margin: 0.5rem 0;
+  color: #2c3e50;
+}
+
+.featureItem p {
+  color: #666;
+}
+
+/* Footer Navigation */
+.footerNavigation {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: auto; /* Push to the bottom */
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+.footerButton {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background: #ff4081; /* Pink */
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.footerButton:hover {
+  background: #e91e63; /* Darker pink */
+}
+
+.footerButton:focus {
+  outline: 2px solid #ff4081; /* Pink */
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .landingHeader {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigationMenu ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .actionButtons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
